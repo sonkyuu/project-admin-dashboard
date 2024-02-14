@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    padding: 0;
+}
+
+
+.container {
+    margin: 0 800px;
+    display: grid;
+    border: 1px solid black;
+    gap: 4px;
+    padding: 4px;
+    height: 99vh;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "sidebar header header header header"
+    "sidebar main-content main-content main-content main-content"
+    "sidebar main-content main-content main-content main-content"
+    "sidebar main-content main-content main-content main-content"
+    "sidebar main-content main-content main-content main-content";
+}
+
+
+.sidebar{
+    border: 1px solid black;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    background-color: #0ea5e9;
+}
+
+.dashboard, .home, .profile, .messages, .history, .tasks, .communities, .settings, .support, .privacy {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0 80px;
+    gap: 0px 40px;
+
+}
+
+.home-communities {
+    margin: 150px 0px;
+}
+
+.dashboard {
+   padding: 20px;
+}
+
+.dashboard-logo {
+    height: 120px;
+    width: 120px;
+    fill: white;
+}
+
+.p-dashboard {
+  font-size: 80px;
+}
+
+.sidebar-logo {
+    height: 60px;
+    width: 60px;
+    fill: white;
+}
+
+.sidebar-text {
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+
+.header{
+    border: 1px solid black;
+    grid-area: header;
+    background-color: white;
+}
+
+.main-content{
+    background-color: #f3f4f6;
+    grid-area: main-content;
+    display: grid;
+    height: 80vh;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "project project project feed"
+    "project project project feed"
+    "project project project feed"
+    "project project project feed";
+}
+
+p {
+    font-size: 60px;
+}
+
+.your-projects{
+    grid-area: project;
+    border: 1px solid black;
+    height: 65vh;
+    margin: 160px 40px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+
+
+.project-item {
+    border: 1px solid black;
+}
+
+.announcement-trending {
+    grid-area: feed;
+    border: 1px solid black;
+    height: 65vh;
+    margin: 160px 40px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 200px 0px;
+}
+
+.announcements {
+    border: 1px solid black;
+}
+
+.trending {
+    border: 1px solid black;
+}
+
